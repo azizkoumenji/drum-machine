@@ -7,3 +7,4 @@ This website was made in order to pass one of the freeCodeCamp Front End Develop
 - SASS
 - Bootstrap
 - Webpack
+- Node
