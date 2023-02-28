@@ -1,0 +1,47 @@
+{
+  "name": "drum-machine",
+  "version": "1.0.0",
+  "description": "One of freeCodeCamp's tests to pass the front end certification.",
+  "main": "webpack.common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedazizkoumenji/drum-machine.git"
+  },
+  "author": "Mohamed Aziz Koumenji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedazizkoumenji/drum-machine/issues"
+  },
+  "homepage": "https://github.com/mohamedazizkoumenji/drum-machine#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-loader": "^7.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3"
+  }
+}
