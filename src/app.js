@@ -5,11 +5,21 @@ class App extends React.Component {
     super(props);
     this.state = {
       keys: ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"],
-      soundNames: ["Heater 1", "Heater 2", "Heater 3", "Heater 4", "Heater 6", "Dsc Oh", "Kick n Hat", "RP4 Kick 1", "Cev H2"],
+      soundNames: [
+        "Heater 1",
+        "Heater 2",
+        "Heater 3",
+        "Heater 4",
+        "Heater 6",
+        "Dsc Oh",
+        "Kick n Hat",
+        "RP4 Kick 1",
+        "Cev H2",
+      ],
       soundDisplay: "Welcome!",
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleKey = this.handleKey.bind(this)
+    this.handleKey = this.handleKey.bind(this);
   }
 
   handleClick(event) {
@@ -26,12 +36,12 @@ class App extends React.Component {
   }
 
   handleKey(event) {
-    console.log(event.key.toUpperCase())
+    console.log(event.key.toUpperCase());
 
     for (let i = 0; i < 9; i++) {
       if (event.key.toUpperCase() == this.state.keys[i]) {
         let aud = document.getElementById(this.state.keys[i] + "aud");
-        console.log(aud)
+        console.log(aud);
         aud.play();
         this.setState({
           soundDisplay: this.state.soundNames[i],
@@ -88,7 +98,9 @@ class App extends React.Component {
       <div id="drum-machine" className="d-flex">
         <div id="buttons">{buttons}</div>
         <div id="display" className="d-flex justify-content-center">
-          <div className="align-self-center">{this.state.soundDisplay}</div>
+          <div className="sound-display align-self-center d-flex align-items-center justify-content-center">
+            {this.state.soundDisplay}
+          </div>
         </div>
       </div>
     );
